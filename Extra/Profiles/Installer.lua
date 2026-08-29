@@ -22,7 +22,7 @@ local function downloadFile(path, func)
     local suc, res = pcall(function()
       return game:HttpGet(
         (
-          'https://raw.githubusercontent.com/AtTheZenith/LunarVape/'
+          'https://raw.githubusercontent.com/LOVEVAPE/LunarVape/'
           .. (isfile 'Lunar Vape/Profiles/Commit.txt' and readfile 'Lunar Vape/Profiles/Commit.txt' or 'main')
           .. '/'
           .. (string.gsub(path, 'Lunar Vape/', ''))

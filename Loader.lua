@@ -1,7 +1,3 @@
-if true then
-  cloneref(game:GetService 'Players').LocalPlayer:Kick("Lunar Vape is discontinued.\nDo not use exploits.")
-end
-
 pcall(function()
   local c = cloneref or function(v)
     return v
@@ -98,7 +94,7 @@ local function downloadFile(path, func)
   if not isfile(path) and not getgenv().LunarVapeDeveloper then
     local suc, res = pcall(function()
       return game:HttpGet(
-        ('https://raw.githubusercontent.com/AtTheZenith/LunarVape/'
+        ('https://raw.githubusercontent.com/LOVEVAPE/LunarVape/'
           .. (isfile 'Lunar Vape/Profiles/Commit.txt' and readfile 'Lunar Vape/Profiles/Commit.txt' or 'main')
           .. '/'
           .. (string.gsub(path, 'Lunar Vape/', ''))):gsub(' ', '%%20'),
@@ -161,7 +157,7 @@ end
 
 if not getgenv().LunarVapeDeveloper then
   local _, subbed = pcall(function()
-    return game:HttpGet 'https://github.com/AtTheZenith/LunarVape'
+    return game:HttpGet 'https://github.com/LOVEVAPE/LunarVape'
   end)
   local commit = subbed:find 'currentOid'
   commit = commit and subbed:sub(commit + 13, commit + 52) or nil
